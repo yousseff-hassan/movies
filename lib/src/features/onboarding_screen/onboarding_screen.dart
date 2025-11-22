@@ -18,6 +18,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   void _goNext() async {
     OnboardingProvider onboardingProvider = Provider.of<OnboardingProvider>(
       context,
+      listen: false,
     );
     final currentPage = _pageController.page?.toInt() ?? 0;
 
