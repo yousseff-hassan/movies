@@ -1,0 +1,56 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:movies_app/src/features/core/assest_manger/assest_manger.dart';
+import 'package:movies_app/src/features/core/theme/app_colors.dart';
+
+class MoviesBasedOnCategoryItem extends StatelessWidget {
+  final String image;
+
+  const MoviesBasedOnCategoryItem({super.key, required this.image});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Stack(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.all(Radius.circular(20.r)),
+            child: Image.asset(
+              image,
+              fit: BoxFit.fill,
+              width: 146.w,
+              height: 220.h,
+            ),
+          ),
+          Positioned(
+            top: 11.h,
+            left: 9.h,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.r),
+                color: AppColors.black2.withOpacity(0.7),
+              ),
+              child: Padding(
+                padding: REdgeInsets.all(7.0),
+                child: Row(
+                  children: [
+                    Text(
+                      "7.7 ",
+                      style: GoogleFonts.roboto(
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w400,
+                        color: AppColors.white,
+                      ),
+                    ),
+                    Image.asset(AssestManger.star),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

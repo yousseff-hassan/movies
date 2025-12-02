@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/providers/onboarding/onboarding_provider.dart';
 import 'package:movies_app/src/features/core/routing/routes_manager.dart';
-import 'package:movies_app/src/features/onboarding_screen/models/onboarding_data.dart';
-import 'package:movies_app/src/features/onboarding_screen/models/onboarding_screen_item.dart';
+import 'package:movies_app/src/features/core/models/onboarding_data.dart';
+import 'package:movies_app/src/features/core/models/onboarding_screen_item.dart';
 import 'package:provider/provider.dart';
 
 class OnboardingScreen extends StatefulWidget {
