@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:movies_app/src/features/core/assest_manger/assest_manger.dart';
-import 'package:movies_app/src/features/core/models/movies_based_on_category_item.dart';
 import 'package:movies_app/src/features/core/models/movies_based_on_search_item.dart';
 import 'package:movies_app/src/features/core/theme/app_colors.dart';
 
@@ -122,7 +121,7 @@ class Profile extends StatelessWidget {
                       ),
                       SizedBox(width: 10.w),
                       ElevatedButton(
-                        onPressed: _onEditProfilePressed,
+                        onPressed: _onExitPressed,
                         style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.red,
                           shape: RoundedRectangleBorder(
@@ -221,6 +220,8 @@ class Profile extends StatelessWidget {
       ),
     );
   }
+
+  void _onExitPressed() {}
 }
 
-_onEditProfilePressed() {}
+void _onEditProfilePressed() {}
